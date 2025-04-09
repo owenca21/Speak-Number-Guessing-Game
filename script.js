@@ -23,3 +23,14 @@ function onSpeak(event) {
   
   // Speak result
   recognition.addEventListener('result', onSpeak);
+
+  // Write what user speaks
+function writeMessage(msg) {
+    const div = document.createElement('div');
+    div.textContent = 'You said: ';
+    const span = document.createElement('span');
+    span.classList.add('box');
+    span.textContent = msg;
+  
+    msgEl.append(div, span);
+  }
